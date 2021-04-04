@@ -1,0 +1,25 @@
+n = int(input(":"))
+if n < 1000:
+    cem = n//100
+    cinq = (n - cem*100)//50
+    dez = ((n - cem*100) - cinq*50)//10
+    cinc = (((n - cem*100) - cinq*50) - dez*10 )//5
+    u = ((((n - cem*100) - cinq*50) - dez*10) - cinc*5)
+
+    if cinq == 0:
+        dez = (n - cem * 100) // 10
+        if cinc ==0:
+            u = ((n - cem * 100) - dez * 10)
+        else:
+            cinc = ((n - cem * 100) - dez * 10) // 5
+            u = ((n - cem * 100) - cinq * 50)
+    #elif cinq ==0:
+     #   dez = (n - cem*100)//10
+     #   cinc = ((n - cem * 100) - dez * 10)//5
+      #  if cinc == 0:
+       #     u = ((n - cem * 100) - dez * 10)//10
+
+
+
+
+print(cem,'de cem',cinq,'de cinquenta',dez,'de dez',cinc,'de cinco',u,'de um')
